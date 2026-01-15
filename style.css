@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    min-height: 100vh;
+    gap: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+}
+
+#imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(0, 212, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+#duckImage {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+#fetchBtn {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    background: #ff1493;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 32px rgba(255, 20, 147, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 1000;
+}
+
+#fetchBtn:hover {
+    background: #ff4da6;
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 12px 48px rgba(255, 20, 147, 0.6);
+}
+
+#fetchBtn:active {
+    transform: translateX(-50%) scale(0.98);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #fetchBtn {
+        padding: 15px 35px;
+        font-size: 1rem;
+    }
+}
