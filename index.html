@@ -3,93 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duck Gallery Dashboard</title>
+    <title>Duck Picture Fetcher</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="dashboard">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-content">
-                <h1 class="title">🦆 Duck Gallery</h1>
-                <p class="subtitle">Fetch random duck images from the API</p>
-            </div>
-            <div class="status-indicator">
-                <span class="status-dot" id="statusDot"></span>
-                <span class="status-text" id="statusText">Ready</span>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Control Panel -->
-            <section class="control-panel">
-                <h2 class="panel-title">Controls</h2>
-                <div class="control-group">
-                    <button id="fetchBtn" class="btn btn-primary">
-                        <span class="btn-icon">🎲</span>
-                        Get Random Duck
-                    </button>
-                    <button id="clearConsoleBtn" class="btn btn-secondary">
-                        <span class="btn-icon">🗑️</span>
-                        Clear Logs
-                    </button>
-                </div>
-                <div class="stats">
-                    <div class="stat">
-                        <span class="stat-label">Requests Made:</span>
-                        <span class="stat-value" id="requestCount">0</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-label">Success Rate:</span>
-                        <span class="stat-value" id="successRate">0%</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Image Display Section -->
-            <section class="image-section">
-                <h2 class="panel-title">Duck Image</h2>
-                <div class="image-wrapper">
-                    <div id="imageContainer" class="image-container">
-                        <div class="placeholder">
-                            <span class="placeholder-text">Click "Get Random Duck" to load an image</span>
-                        </div>
-                        <img id="duckImage" alt="Random duck image" class="duck-image" style="display: none;">
-                    </div>
-                    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
-                        <div class="spinner"></div>
-                        <p>Loading duck...</p>
-                    </div>
-                    <div id="errorAlert" class="error-alert" style="display: none;">
-                        <span class="error-icon">⚠️</span>
-                        <span id="errorMessage">Error loading image</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Console Section -->
-            <section class="console-section">
-                <div class="console-header">
-                    <h2 class="panel-title">Console Logs</h2>
-                    <div class="console-filters">
-                        <button class="filter-btn active" data-filter="all">All</button>
-                        <button class="filter-btn" data-filter="info">Info</button>
-                        <button class="filter-btn" data-filter="success">Success</button>
-                        <button class="filter-btn" data-filter="error">Error</button>
-                    </div>
-                </div>
-                <div id="consoleOutput" class="console-output">
-                    <div class="log-entry log-info">
-                        <span class="log-time">[00:00:00]</span>
-                        <span class="log-type info">INFO</span>
-                        <span class="log-message">Console initialized - Ready to fetch ducks!</span>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <div class="container">
+        <h1>Duck Picture Fetcher</h1>
+        <button id="fetchBtn">Get a Duck Picture</button>
+        <div id="imageContainer">
+            <img id="duckImage" src="" alt="Duck picture will appear here">
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
